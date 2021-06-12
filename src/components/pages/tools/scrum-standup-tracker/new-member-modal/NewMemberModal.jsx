@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './NewMemberModal.module.scss'
 import ModalWrapper from '../../../../wrappers/modal/ModalWrapper'
 import TextInput from '../../../../inputs/text-input/TextInput'

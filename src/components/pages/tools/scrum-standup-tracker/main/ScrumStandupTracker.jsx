@@ -3,7 +3,6 @@ import styles from './ScrumStandupTracker.module.scss'
 import Heading from '../../../../wrappers/heading/HeadingWrapper';
 import PageWrapper from '../../../../wrappers/page/PageWrapper';
 import SidebarWrapper from '../../../../wrappers/sidebar/SidebarWrapper';
-import { useScrumStandupTrackerContext } from '../../../../../context/ScrumStandupTrackerContext';
 import TeamGrid from '../team-grid/TeamGrid';
 import NewMemberModal from '../new-member-modal/NewMemberModal';
 

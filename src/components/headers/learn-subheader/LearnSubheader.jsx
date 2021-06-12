@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../Headers.module.scss'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const LearnSubheader = () => {
   return(
