@@ -5,7 +5,7 @@ import Heading from '../../wrappers/heading/HeadingWrapper';
 const Home = () => {
   return(
     <PageWrapper>
-      <Heading level="h1">
+      <Heading level="1">
         My Name Is Amir... and I Am Curious About The World We Live In.
       </Heading>
     </PageWrapper>

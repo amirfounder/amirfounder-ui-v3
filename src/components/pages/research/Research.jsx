@@ -1,10 +1,13 @@
 import React from 'react'
 import PageWrapper from '../../wrappers/page/PageWrapper'
+import Heading from '../../wrappers/heading/HeadingWrapper'
 
 const Research = () => {
   return(
     <PageWrapper>
-      Research
+      <Heading level="1">
+        Research
+      </Heading>
     </PageWrapper>
   )
 }

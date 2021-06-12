@@ -5,7 +5,7 @@ import Heading from '../../wrappers/heading/HeadingWrapper';
 const Learn = () => {
   return(
     <PageWrapper>
-      <Heading>
+      <Heading level="1">
         Learn
       </Heading>
     </PageWrapper>
