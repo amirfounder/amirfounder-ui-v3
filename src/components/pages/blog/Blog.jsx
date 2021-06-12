@@ -5,7 +5,7 @@ import PageWrapper from '../../wrappers/page/PageWrapper'
 const Blog = () => {
   return(
     <PageWrapper>
-      Blog
+      Blog.
     </PageWrapper>
   )
 }
