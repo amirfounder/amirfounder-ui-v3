@@ -1,18 +1,40 @@
+// EXTERNAL IMPORTS
+import { React} from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
+// LOCAL IMPORTS
+import { Constants } from '../../utils/Constants';
 import styles from './App.module.scss';
-import { Switch, Route } from 'react-router-dom';
+import pathNameDoesMatch from '../../utils/PathNameMatchers'
+// PAGES
 import Home from '../pages/home/Home';
-import Header from '../header/Header';
 import About from '../pages/about/About';
 import Research from '../pages/research/Research';
 import Tools from '../pages/tools/Tools';
 import Projects from '../pages/projects/Projects';
 import Blog from '../pages/blog/Blog';
 import Learn from '../pages/learn/Learn';
+// HEADERS
+import Header from '../headers/header/Header';
+import ToolsSubheader from '../headers/tools-subheader/ToolsSubheader';
+import ResearchSubheader from '../headers/research-subheader/ResearchSubheader';
+import LearnSubheader from '../headers/learn-subheader/LearnSubheader';
+import AboutSubheader from '../headers/about-subheader/AboutSubheader';
+import ProjectsSubheader from '../headers/projects-subheader/ProjectsSubheader';
+
 
 function App() {
+
+  const location = useLocation()
+
   return (
     <div className={styles.main}>
       <Header />
+      {/* RENDER SUBHEADER BASED ON THE CURRENT PATHNAME */}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.ABOUT) && <AboutSubheader />}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.LEARN) && <LearnSubheader />}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.PROJECTS) && <ProjectsSubheader />}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.TOOLS) && <ToolsSubheader />}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.RESEARCH) && <ResearchSubheader />}
       <Switch>
         <Route exact path="/" component={Home} /> 
         <Route exact path="/about" component={About} /> 

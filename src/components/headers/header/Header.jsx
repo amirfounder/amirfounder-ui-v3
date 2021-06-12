@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import styles from './Header.module.scss'
+import styles from '../Headers.module.scss'
 
 const Header = () => {
   return(
-    <div className={styles.main}>
+    <div className={styles.header}>
       <div className={styles.columnOne}>
         <Link className={styles.wordmark} to="/">
           <span className={styles.amir}>Amir </span>
