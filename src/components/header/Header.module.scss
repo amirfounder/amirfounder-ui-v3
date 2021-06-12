@@ -1,0 +1,48 @@
+.columnOne {
+  justify-self: start;
+  align-items: center;
+}
+
+.columnTwo {
+  justify-self: end;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 6vh;
+  align-items: center;
+  padding: 0px 2vw;
+  background-color: #f4f4f4;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+  margin-left: 2vw;
+}
+
+.navLink:hover {
+  color: red;
+  transition-duration: .5s;
+}
+
+.navLink:not(:hover) {
+  color: black;
+  transition-duration: .5s;
+}
+
+.wordmark {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.wordmark > .amir {
+  color: red;
+}
+
+.wordmark > .sharapov {
+  color: black;
+}
