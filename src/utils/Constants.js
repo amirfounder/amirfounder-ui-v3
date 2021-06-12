@@ -7,5 +7,11 @@ export const Constants = Object.freeze({
       RESEARCH: /\/research/,
       TOOLS: /\/tools/
     }
-  }
+  },
+  ATTENDANCE_VALUES: [
+    'Present',
+    'Late',
+    'Absent',
+    'Excused'
+  ]
 })

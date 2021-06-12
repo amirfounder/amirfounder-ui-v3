@@ -1,4 +1,12 @@
 .main {
-  padding: 2vw;
+  padding: 5vh 2vw;
+  display: grid;
+}
+
+.contained {
   max-width: 600px;
+}
+
+.fullwidth {
+  max-width: 100%;
 }

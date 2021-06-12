@@ -1,0 +1,13 @@
+.main {
+  width: 30vw;
+}
+
+.newMembers {
+  margin: 30px 0px;
+}
+
+.newMember {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}

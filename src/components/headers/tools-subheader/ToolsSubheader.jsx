@@ -9,7 +9,7 @@ const ToolsSubheader = () => {
         Tools:
       </div>
       <div className={styles.columnTwo}>
-        <Link className={styles.navLink}>Scrum Tools</Link>
+        <Link className={styles.navLink} to="/tools/scrum-standup-tracker">Scrum Standup Tracker</Link>
       </div>
     </div>
   )

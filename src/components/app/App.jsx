@@ -1,5 +1,5 @@
 // EXTERNAL IMPORTS
-import { React} from 'react';
+import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 // LOCAL IMPORTS
 import { Constants } from '../../utils/Constants';
@@ -9,7 +9,7 @@ import pathNameDoesMatch from '../../utils/PathNameMatchers'
 import Home from '../pages/home/Home';
 import About from '../pages/about/About';
 import Research from '../pages/research/Research';
-import Tools from '../pages/tools/Tools';
+import Tools from '../pages/tools-page/Tools';
 import Projects from '../pages/projects/Projects';
 import Blog from '../pages/blog/Blog';
 import Learn from '../pages/learn/Learn';
@@ -20,6 +20,7 @@ import ResearchSubheader from '../headers/research-subheader/ResearchSubheader';
 import LearnSubheader from '../headers/learn-subheader/LearnSubheader';
 import AboutSubheader from '../headers/about-subheader/AboutSubheader';
 import ProjectsSubheader from '../headers/projects-subheader/ProjectsSubheader';
+import ScrumStandupTracker from '../pages/tools/scrum-standup-tracker/main/ScrumStandupTracker';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/projects" component={Projects} /> 
         <Route exact path="/research" component={Research} /> 
         <Route exact path="/tools" component={Tools} /> 
+        <Route exact path="/tools/scrum-standup-tracker" component={ScrumStandupTracker} /> 
       </Switch>
     </div>
   );

@@ -6,7 +6,7 @@ const Home = () => {
   return(
     <PageWrapper>
       <Heading level="1">
-        My Name Is Amir... and I Am Curious About The World We Live In.
+        My Name Is Amir and I Am Curious About Our World.
       </Heading>
     </PageWrapper>
   )
