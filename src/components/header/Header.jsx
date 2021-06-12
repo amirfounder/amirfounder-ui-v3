@@ -13,6 +13,9 @@ const Header = () => {
       </div>
       <div className={styles.columnTwo}>
         <Link className={styles.navLink} to="/about">About</Link>
+        <Link className={styles.navLink} to="/blog">Blog</Link>
+        <Link className={styles.navLink} to="/learn">Learn</Link>
+        <Link className={styles.navLink} to="/projects">Projects</Link>
         <Link className={styles.navLink} to="/research">Research</Link>
         <Link className={styles.navLink} to="/tools">Tools</Link>
       </div>

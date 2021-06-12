@@ -1,12 +1,12 @@
 import React from 'react';
 import PageWrapper from '../../wrappers/page/PageWrapper';
 
-const About = () => {
+const Learn = () => {
   return(
     <PageWrapper>
-      About
+      Learn
     </PageWrapper>
   )
 }
 
-export default About;
+export default Learn;

@@ -1,12 +1,14 @@
 import React from 'react';
+import styles from './Projects.module.scss'
 import PageWrapper from '../../wrappers/page/PageWrapper';
 
-const About = () => {
+
+const Projects = () => {
   return(
     <PageWrapper>
-      About
+      Projects
     </PageWrapper>
   )
 }
 
-export default About;
+export default Projects
