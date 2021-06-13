@@ -1,12 +1,26 @@
-.textInput, .selectInput {
+.textInput,
+.selectInput,
+.textAreaInput {
   border-width: 0px;
   border-bottom: 1px solid lightgray;
   width: 100%;
-  font-size: 15px;
+  font-size: 14px;
   padding: 5px 0px;
+  font-family: inherit;
 }
 
 .textInput:focus,
-.selectInput:focus {
+.selectInput:focus,
+.textAreaInput:focus {
   outline: none;
+}
+
+.selectInput {
+  padding: 4px 0px 5px 0px;
+}
+
+.textAreaInput {
+  resize: vertical;
+  overflow: hidden;
+  height: fit-content;
 }

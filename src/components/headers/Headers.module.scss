@@ -9,7 +9,7 @@
 .header, .subheader {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 6vh;
+  min-height: 7vh;
   align-items: center;
   padding: 0px 2vw;
 }
@@ -20,7 +20,6 @@
 }
 
 .subheader {
-  // min-height: 6vh;
   background-color: #f7f7f7;
 }
 
@@ -41,6 +40,10 @@
   transition-duration: .5s;
 }
 
+.navLink:focus {
+  outline: none;
+}
+
 // MAIN HEADER ONLY
 
 .wordmark {
@@ -50,7 +53,7 @@
 }
 
 .wordmark > .amir {
-  color: lightgray;
+  color: black;
 }
 
 .wordmark > .sharapov {

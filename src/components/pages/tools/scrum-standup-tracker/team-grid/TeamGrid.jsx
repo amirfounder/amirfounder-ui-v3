@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScrumStandupTrackerContext } from '../../../../../context/ScrumStandupTrackerContext';
 import styles from './TeamGrid.module.scss'
-import TeamGridMemberRecord from '../team-grid-member-record/TeamGridMemberRecord';
+import TeamGridMemberRecord from '../team-grid-record/TeamGridMemberRecord';
 
 const TeamGrid = () => {
 
