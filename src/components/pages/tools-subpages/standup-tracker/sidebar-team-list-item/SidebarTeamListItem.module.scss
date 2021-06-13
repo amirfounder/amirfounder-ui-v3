@@ -1,0 +1,12 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.memberInfo {
+  justify-self: start;
+}
+
+.memberActions {
+  justify-self: end;
+}

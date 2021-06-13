@@ -25,7 +25,7 @@ const Sidebar = () => {
     <div>
       <SidebarWrapper>
         <Heading level="2">
-          Manage Your Team
+          Manage Team
         </Heading>
         <SidebarTeamList />
         <div>
