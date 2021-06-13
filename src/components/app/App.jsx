@@ -7,20 +7,23 @@ import styles from './App.module.scss';
 import pathNameDoesMatch from '../../utils/PathNameMatchers'
 // PAGES
 import Home from '../pages/home/Home';
-import About from '../pages/about/About';
-import Research from '../pages/research/Research';
+import About from '../pages/about-page/About';
+import Research from '../pages/research-page/Research';
 import Tools from '../pages/tools-page/Tools';
-import Projects from '../pages/projects/Projects';
+import Projects from '../pages/projects-page/Projects';
 import Blog from '../pages/blog/Blog';
-import Learn from '../pages/learn/Learn';
+import Resume from '../pages/about-subpages/resume/Resume';
+import Vision from '../pages/about-subpages/vision/Vision';
+import Interests from '../pages/about-subpages/interests/Interests';
+import Contact from '../pages/contact/Contact';
+import StandupTracker from '../pages/tools-subpages/standup-tracker/StandupTracker';
 // HEADERS
 import Header from '../headers/header/Header';
-import ToolsSubheader from '../headers/tools-subheader/ToolsSubheader';
-import ResearchSubheader from '../headers/research-subheader/ResearchSubheader';
-import LearnSubheader from '../headers/learn-subheader/LearnSubheader';
-import AboutSubheader from '../headers/about-subheader/AboutSubheader';
-import ProjectsSubheader from '../headers/projects-subheader/ProjectsSubheader';
-import ScrumStandupTracker from '../pages/tools/scrum-standup-tracker/main/ScrumStandupTracker';
+import ToolsSubheader from '../headers/subheaders/tools-subheader/ToolsSubheader';
+import ResearchSubheader from '../headers/subheaders/research-subheader/ResearchSubheader';
+import AboutSubheader from '../headers/subheaders/about-subheader/AboutSubheader';
+import ProjectsSubheader from '../headers/subheaders/projects-subheader/ProjectsSubheader';
+import BlogSubheader from '../headers/subheaders/blog-subheader/BlogSubheader';
 
 
 function App() {
@@ -30,21 +33,33 @@ function App() {
   return (
     <div className={styles.main}>
       <Header />
-      {/* RENDER SUBHEADER BASED ON THE CURRENT PATHNAME */}
+      {/* SUBHEADERS */}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.ABOUT) && <AboutSubheader />}
-      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.LEARN) && <LearnSubheader />}
+      {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.BLOG) && <BlogSubheader />}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.PROJECTS) && <ProjectsSubheader />}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.TOOLS) && <ToolsSubheader />}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.RESEARCH) && <ResearchSubheader />}
+
+      {/* PATHS */}
       <Switch>
-        <Route exact path="/" component={Home} /> 
-        <Route exact path="/about" component={About} /> 
-        <Route exact path="/blog" component={Blog} /> 
-        <Route exact path="/learn" component={Learn} /> 
-        <Route exact path="/projects" component={Projects} /> 
-        <Route exact path="/research" component={Research} /> 
-        <Route exact path="/tools" component={Tools} /> 
-        <Route exact path="/tools/scrum-standup-tracker" component={ScrumStandupTracker} /> 
+        {/* HOME */}
+        <Route exact path={Constants.PATHS.HOME} component={Home} />
+        {/* ABOUT */}
+        <Route exact path={Constants.PATHS.ABOUT} component={About} /> 
+        <Route exact path={Constants.PATHS.VISION} component={Vision} /> 
+        <Route exact path={Constants.PATHS.RESUME} component={Resume} /> 
+        <Route exact path={Constants.PATHS.INTERESTS} component={Interests} /> 
+        {/* BLOG */}
+        <Route exact path={Constants.PATHS.BLOG} component={Blog} /> 
+        {/* PROJECTS */}
+        <Route exact path={Constants.PATHS.PROJECTS} component={Projects} />
+        {/* RESEARCH */}
+        <Route exact path={Constants.PATHS.RESEARCH} component={Research} /> 
+        {/* TOOLS */}
+        <Route exact path={Constants.PATHS.TOOLS} component={Tools} /> 
+        <Route exact path={Constants.PATHS.STANDUP_TRACKER} component={StandupTracker} /> 
+        {/* CONTACT */}
+        <Route exact path={Constants.PATHS.CONTACT} component={Contact} />
       </Switch>
     </div>
   );

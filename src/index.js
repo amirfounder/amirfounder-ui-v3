@@ -4,14 +4,14 @@ import './index.scss';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ScrumStandupTrackerProvider } from './context/ScrumStandupTrackerContext'
+import { StandupTrackerProvider } from './context/StandupTrackerContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <ScrumStandupTrackerProvider>
+      <StandupTrackerProvider>
         <App />
-      </ScrumStandupTrackerProvider>
+      </StandupTrackerProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

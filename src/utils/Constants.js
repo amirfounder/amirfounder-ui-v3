@@ -2,7 +2,7 @@ export const Constants = Object.freeze({
   REGEX: {
     PATHNAMES: {
       ABOUT: /\/about/,
-      LEARN: /\/learn/,
+      BLOG: /\/blog/,
       PROJECTS: /\/projects/,
       RESEARCH: /\/research/,
       TOOLS: /\/tools/
@@ -16,5 +16,19 @@ export const Constants = Object.freeze({
   ],
   COOKIE_FIELDS: {
     MEMBERS: 'members'
+  },
+  PATHS: {
+    HOME: '/',
+    ABOUT: '/about',
+    BLOG: '/blog',
+    LEARN: '/learn',
+    PROJECTS: '/projects',
+    RESEARCH: '/research',
+    TOOLS: '/tools',
+    CONTACT: '/contact',
+    VISION: '/about/vision',
+    RESUME: '/about/resume',
+    INTERESTS: '/about/interests',
+    STANDUP_TRACKER: '/tools/standup-tracker'
   }
 })

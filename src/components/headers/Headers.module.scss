@@ -6,34 +6,28 @@
   justify-self: end;
 }
 
-.subheader > .columnOne,
-.subheader > .columnTwo {
-  display: grid;
-  align-items: center;
-}
-
 .header, .subheader {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
   min-height: 7vh;
   align-items: center;
   padding: 0px 2vw;
 }
 
 .header {
-  min-height: 7vh;
+  min-height: 8vh;
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
 
 .subheader {
-  min-height: 5vh;
-  background-color: #f7f7f7;
+  min-height: 6vh;
+  background-color: black;
 }
 
 .navLink {
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   color: black;
 }
 
@@ -51,18 +45,25 @@
   outline: none;
 }
 
-.columnOne > .navLink {
-  margin-right: 3vw;
-}
-
 .columnTwo > .navLink {
   margin-left: 3vw;
 }
 
-// MAIN HEADER ONLY
+.header > .columnTwo > .navLink {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.subheader > .columnOne > .navLink,
+.subheader > .columnTwo > .navLink
+{
+  font-size: 14px;
+  color: lightgray;
+}
 
 .wordmark {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 300;
   text-decoration: none;
   color: black;
 }
