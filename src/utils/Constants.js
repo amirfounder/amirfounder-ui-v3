@@ -13,5 +13,8 @@ export const Constants = Object.freeze({
     'Late',
     'Absent',
     'Excused'
-  ]
+  ],
+  COOKIE_FIELDS: {
+    MEMBERS: 'members'
+  }
 })

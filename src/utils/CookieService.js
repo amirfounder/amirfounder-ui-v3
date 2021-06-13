@@ -1,4 +1,7 @@
+
 // COOKIE SERVICE
+
+import { Constants } from "./Constants"
 
 export const getAllCookies = () => {
   return document.cookie
@@ -17,15 +20,15 @@ export const getCookie = (field) => {
 }
 
 export const setCookie = (field, value, expires=new Date(9999, 0, 1).toUTCString()) => {
-  document.cookie = `${field}=${value}; expires=${expires}`
+  document.cookie = `${field}=${value}; expires=${expires}; path=/`
 }
 
 // SCRUM STANDUP TRACKER
 
 export const getMembersFromCookie = () => {
-  return JSON.parse(getCookie('members'))
+  return JSON.parse(getCookie(Constants.COOKIE_FIELDS.MEMBERS)) 
 }
 
 export const setMembersInCookie = (members) => {
-  setCookie('members', JSON.stringify(members))
+  setCookie(Constants.COOKIE_FIELDS.MEMBERS, JSON.stringify(members))
 }

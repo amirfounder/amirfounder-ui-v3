@@ -13,16 +13,19 @@ const ScrumStandupTracker = () => {
   const {
     members, setMembers
   } = useScrumStandupTrackerContext()
+
   const [show, setShow] = useState(false)
 
-  const handleAddMemberClick = () => {
-    setShow(true)
-  }
+  const handleAddMemberClick = () => setShow(true)
 
   const handleDeleteAllMembersClick = () => {
     setMembersInCookie([])
     setMembers([])
   }
+
+  // const gioFunction = useMemo(() => {
+  //   setMembers(getMembersFromCookie())
+  // }, [])
 
   useEffect(() => {
     setMembers(getMembersFromCookie())
@@ -34,28 +37,21 @@ const ScrumStandupTracker = () => {
         Scrum Standup Tracker
       </Heading>
       <div className={styles.main}>
-
-        {/* MAIN GRID */}
-
-        <div>
-          <TeamGrid />
-        </div>
-
-        {/* SIDEBAR */}
+        <TeamGrid />
         <div>
           <SidebarWrapper>
             <Heading level="3">Manage Your Team</Heading>
-            <div>
-              {members && members.map((member) => (
-                <div>{member.firstName} {member.lastName}</div>
-              ))}
-            </div>
+            {members && members.map((member, index) => (
+              <div key={`${member}-${index}`}>
+                {member.firstName} {member.lastName}
+              </div>
+            ))}
             <div>
               <button onClick={handleAddMemberClick}>Add Member</button>
               <button onClick={handleDeleteAllMembersClick}>Delete All Members</button>
             </div>
-            <NewMemberModal show={show} setShow={setShow}/>
           </SidebarWrapper>
+          <NewMemberModal show={show} setShow={setShow}/>
         </div>
       </div>
     </PageWrapper>

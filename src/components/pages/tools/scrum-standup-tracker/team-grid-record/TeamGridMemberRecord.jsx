@@ -9,9 +9,11 @@ const TeamGridMemberRecord = ({ member }) => {
   return(
     <div className={styles.main}>
       <TextInput
+        readOnly
         value={member.firstName}
       />
       <TextInput
+        readOnly
         value={member.lastName}
       />
       <SelectInput

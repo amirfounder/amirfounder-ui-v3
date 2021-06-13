@@ -1,5 +1,5 @@
 // EXTERNAL IMPORTS
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 // LOCAL IMPORTS
 import { Constants } from '../../utils/Constants';
@@ -21,21 +21,11 @@ import LearnSubheader from '../headers/learn-subheader/LearnSubheader';
 import AboutSubheader from '../headers/about-subheader/AboutSubheader';
 import ProjectsSubheader from '../headers/projects-subheader/ProjectsSubheader';
 import ScrumStandupTracker from '../pages/tools/scrum-standup-tracker/main/ScrumStandupTracker';
-import { useScrumStandupTrackerContext } from '../../context/ScrumStandupTrackerContext';
-import { getMembersFromCookie } from '../../utils/CookieService';
 
 
 function App() {
 
   const location = useLocation()
-
-  const {
-    setMembers
-  } = useScrumStandupTrackerContext()
-
-  useEffect(() => {
-    setMembers(getMembersFromCookie())
-  }, [setMembers])
 
   return (
     <div className={styles.main}>
