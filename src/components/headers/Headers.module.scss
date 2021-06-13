@@ -6,6 +6,12 @@
   justify-self: end;
 }
 
+.subheader > .columnOne,
+.subheader > .columnTwo {
+  display: grid;
+  align-items: center;
+}
+
 .header, .subheader {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,11 +21,13 @@
 }
 
 .header {
+  min-height: 7vh;
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
 
 .subheader {
+  min-height: 5vh;
   background-color: #f7f7f7;
 }
 
@@ -27,7 +35,6 @@
   text-decoration: none;
   font-size: 13px;
   color: black;
-  margin-left: 3vw;
 }
 
 .navLink:hover {
@@ -42,6 +49,14 @@
 
 .navLink:focus {
   outline: none;
+}
+
+.columnOne > .navLink {
+  margin-right: 3vw;
+}
+
+.columnTwo > .navLink {
+  margin-left: 3vw;
 }
 
 // MAIN HEADER ONLY

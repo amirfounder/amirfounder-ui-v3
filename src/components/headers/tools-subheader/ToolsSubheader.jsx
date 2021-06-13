@@ -6,7 +6,7 @@ const ToolsSubheader = () => {
   return(
     <div className={styles.subheader}>
       <div className={styles.columnOne}>
-        Tools:
+        <Link className={styles.navLink} to="/tools">Tools</Link>
       </div>
       <div className={styles.columnTwo}>
         <Link className={styles.navLink} to="/tools/scrum-standup-tracker">Scrum Standup Tracker</Link>
