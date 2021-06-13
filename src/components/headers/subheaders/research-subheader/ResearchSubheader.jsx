@@ -9,7 +9,7 @@ const ResearchSubheader = () => {
         Research
       </div>
       <diiv className={styles.columnTwo}>
-        <Link className={styles.navLink}>Computer Vision (Coming Soon)</Link>
+        <Link className={styles.navLink} to="/">Computer Vision (Coming Soon)</Link>
       </diiv>
     </div>
   )

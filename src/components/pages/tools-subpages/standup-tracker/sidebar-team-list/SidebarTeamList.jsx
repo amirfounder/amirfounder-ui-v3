@@ -11,7 +11,7 @@ const SidebarTeamList = () => {
   return(
     <div className={styles.main}>
       {members && members.map((member) => (
-        <SidebarTeamListItem member={member}/>
+        <SidebarTeamListItem member={member} key={member.id}/>
       ))}
     </div>
   )

@@ -4,7 +4,8 @@ import ModalWrapper from '../../../../../wrappers/modal/ModalWrapper'
 import TextInput from '../../../../../inputs/text-input/TextInput'
 import Heading from '../../../../../wrappers/heading/HeadingWrapper'
 import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext'
-import { setMembersInCookie } from '../../../../../../utils/CookieService'
+import { createMember } from './NewMemberModalService'
+import { Constants } from '../../../../../../utils/Constants'
 
 const NewMemberModal = ({ show, setShow }) => {
 
@@ -12,48 +13,21 @@ const NewMemberModal = ({ show, setShow }) => {
     members, setMembers
   } = useStandupTrackerContext()
 
-  const [newMember, setNewMember] = useState({
-    firstName: '',
-    lastName: ''
-  })
+  const [newMember, setNewMember] = useState(Constants.OBJECTS.EMPTY_MEMBER_OBJECT)
 
   const handleCancel = () => {
-    setNewMember({firstName: '', lastName: ''})
+    setNewMember(Constants.OBJECTS.EMPTY_MEMBER_OBJECT)
     setShow(false)
   }
 
   const handleSubmit = () => {
-    const tempNewMember = {...newMember}
-    let tempMembers = []
-    if (members && members.length > 0) {
-      tempMembers = JSON.parse(JSON.stringify(members))
-    }
-
-    // CHECK TO MAKE SURE FIRST AND LAST NAME ARE NOT BLANK
-    if (!tempNewMember.firstName) {
-      tempNewMember.firstName = "-"
-    } 
-    if (!tempNewMember.lastName) {
-      tempNewMember.lastName = "-"
-    }
-
-    // CHECK AGAINST DUPLICATES
-    for (const member of tempMembers) {
-      if (tempNewMember.firstName ===  member.firstName &
-        tempNewMember.lastName === member.lastName
-      ) {
-        tempNewMember.lastName += " (Copy)"
-      }
-    }
-
-    // UPDATE MEMBERS
-    tempMembers.push(tempNewMember)
-    setMembers(tempMembers)
-    setMembersInCookie(tempMembers)
-
-    // RESET MODAL
-    setNewMember({firstName: '', lastName: ''})
-    setShow(false)
+    createMember(
+      members,
+      setMembers,
+      newMember,
+      setNewMember,
+      setShow
+    )
   }
 
   const handleInputChange = (e) => {

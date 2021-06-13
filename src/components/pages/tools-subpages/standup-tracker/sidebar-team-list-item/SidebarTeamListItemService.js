@@ -3,9 +3,7 @@ import { setMembersInCookie } from "../../../../../utils/CookieService"
 export const deleteMember = (members, member) => {
   const newMembers = []
   for (const loopedMember of members) {
-    if (loopedMember.firstName !== member.firstName &&
-      loopedMember.lastName !== member.lastName
-    ) {
+    if (loopedMember.id !== member.id) {
       newMembers.push({...loopedMember})
     }
   }

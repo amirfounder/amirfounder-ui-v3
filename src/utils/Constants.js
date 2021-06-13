@@ -30,5 +30,16 @@ export const Constants = Object.freeze({
     RESUME: '/about/resume',
     INTERESTS: '/about/interests',
     STANDUP_TRACKER: '/tools/standup-tracker'
+  },
+  OBJECTS: {
+    EMPTY_MEMBER_OBJECT: {
+      id: '',
+      firstName: '',
+      lastName: '',
+      attendance: 'Present',
+      last24Hours: '',
+      next24Hours: '',
+      blockers: '',
+    }
   }
 })

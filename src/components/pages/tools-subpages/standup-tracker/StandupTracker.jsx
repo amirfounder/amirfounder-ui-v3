@@ -6,11 +6,14 @@ import TeamGrid from './team-grid/TeamGrid';
 import { useStandupTrackerContext } from '../../../../context/StandupTrackerContext';
 import { getMembersFromCookie } from '../../../../utils/CookieService';
 import Sidebar from './sidebar/Sidebar';
+import { CSVDownload, CSVLink } from 'react-csv';
+import { convertMembersToCSVData } from '../../../../utils/CSVHelper';
+import DownloadMembersButton from './download-members-button/DownloadMembersButton';
 
 const StandupTracker = () => {
   
   const {
-    setMembers
+    members, setMembers
   } = useStandupTrackerContext()
 
   useEffect(() => {
@@ -23,8 +26,13 @@ const StandupTracker = () => {
         Standup Tracker
       </Heading>
       <div className={styles.main}>
-        <TeamGrid />
-        <Sidebar />
+        <div>
+          <TeamGrid />
+          <DownloadMembersButton />
+        </div>
+        <div>
+          <Sidebar />
+        </div>
       </div>
     </PageWrapper>
   )

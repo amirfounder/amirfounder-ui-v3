@@ -1,6 +1,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 28px;
 }
 
 .memberInfo {
@@ -9,4 +10,22 @@
 
 .memberActions {
   justify-self: end;
+}
+
+.memberActions > span {
+  margin-left: 5px;
+}
+
+.deleteIcon,
+.editIcon {
+  font-size: 18px;
+}
+
+.deleteIcon:hover,
+.editIcon:hover {
+  cursor: pointer;
+}
+
+.deleteIcon:hover {
+  color: red;
 }
