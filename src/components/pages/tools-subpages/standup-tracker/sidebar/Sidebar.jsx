@@ -22,17 +22,19 @@ const Sidebar = () => {
   }
 
   return(
-    <SidebarWrapper>
-      <Heading level="2">
-        Manage Your Team
-      </Heading>
-      <SidebarTeamList />
-      <div>
-        <button onClick={handleAddMemberClick}>Add Member</button>
-        <button onClick={handleDeleteAllMembersClick}>Delete All Members</button>
-      </div>
-      <NewMemberModal show={newMemberShow} setShow={setNewMemberModalShow}/>
-    </SidebarWrapper>
+    <div>
+      <SidebarWrapper>
+        <Heading level="2">
+          Manage Your Team
+        </Heading>
+        <SidebarTeamList />
+        <div>
+          <button onClick={handleAddMemberClick}>Add Member</button>
+          <button onClick={handleDeleteAllMembersClick}>Delete All Members</button>
+        </div>
+        <NewMemberModal show={newMemberShow} setShow={setNewMemberModalShow}/>
+      </SidebarWrapper>
+    </div>
   )
 }
 

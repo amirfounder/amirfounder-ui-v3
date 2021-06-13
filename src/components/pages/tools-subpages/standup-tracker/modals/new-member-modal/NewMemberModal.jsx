@@ -31,10 +31,10 @@ const NewMemberModal = ({ show, setShow }) => {
 
     // CHECK TO MAKE SURE FIRST AND LAST NAME ARE NOT BLANK
     if (!tempNewMember.firstName) {
-      tempNewMember.firstName = "N/A"
+      tempNewMember.firstName = "-"
     } 
     if (!tempNewMember.lastName) {
-      tempNewMember.lastName = "N/A"
+      tempNewMember.lastName = "-"
     }
 
     // CHECK AGAINST DUPLICATES
