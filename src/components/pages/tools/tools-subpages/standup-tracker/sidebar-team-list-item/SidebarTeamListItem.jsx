@@ -3,7 +3,7 @@ import { useStandupTrackerContext } from '../../../../../../context/StandupTrack
 import styles from './SidebarTeamListItem.module.scss'
 import { deleteMember } from './SidebarTeamListItemService';
 import { VscTrash } from 'react-icons/vsc'
-import { BsPencil } from 'react-icons/bs'
+// import { BsPencil } from 'react-icons/bs'
 
 const SidebarTeamListItem = ({ member }) => {
 
@@ -15,9 +15,9 @@ const SidebarTeamListItem = ({ member }) => {
     setMembers(deleteMember(members, member))
   }
 
-  const handleMemberEdit = () => {
-    console.log('clicked the edit')
-  }
+  // const handleMemberEdit = () => {
+  //   console.log('clicked the edit')
+  // }
 
   return(
     <div className={styles.main}>
