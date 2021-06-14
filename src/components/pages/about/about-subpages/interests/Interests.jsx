@@ -1,13 +1,26 @@
 import React from 'react'
-import Heading from '../../../../wrappers/heading/HeadingWrapper'
+import HeadingWrapper from '../../../../wrappers/heading/HeadingWrapper'
 import PageWrapper from '../../../../wrappers/page/PageWrapper'
+import ParagraphWrapper from '../../../../wrappers/paragraph/ParagraphWrapper'
 
 const Interests = () => {
   return(
     <PageWrapper>
-      <Heading level='1'>
+      <HeadingWrapper level='1'>
         Interests
-      </Heading>
+      </HeadingWrapper>
+      <HeadingWrapper>Mathematics</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
+      <HeadingWrapper>Physics</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
+      <HeadingWrapper>Computer Science</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
+      <HeadingWrapper>Economics</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
+      <HeadingWrapper>Psychology</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
+      <HeadingWrapper>Finance</HeadingWrapper>
+      <ParagraphWrapper>More information coming soon...</ParagraphWrapper>
     </PageWrapper>
   )
 }

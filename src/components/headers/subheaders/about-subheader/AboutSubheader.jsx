@@ -9,10 +9,10 @@ const AboutSubheader = () => {
       <div className={styles.columnOne}>
         <Link className={styles.navLink} to={Constants.PATHS.ABOUT}>About</Link>
       </div>
-      <diiv className={styles.columnTwo}>
+      <div className={styles.columnTwo}>
         <Link className={styles.navLink} to={Constants.PATHS.ABOUT_RESUME}>Resume</Link>
         <Link className={styles.navLink} to={Constants.PATHS.ABOUT_INTERESTS}>Interests</Link>
-      </diiv>
+      </div>
     </div>
   )
 }

@@ -9,9 +9,9 @@ const BlogSubheader = () => {
       <div className={styles.columnOne}>
         <Link className={styles.navLink} to={Constants.PATHS.BLOG}>Blog</Link>
       </div>
-      <diiv className={styles.columnTwo}>
+      <div className={styles.columnTwo}>
 
-      </diiv>
+      </div>
     </div>
   )
 }

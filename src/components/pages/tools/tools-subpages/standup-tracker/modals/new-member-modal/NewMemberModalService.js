@@ -16,17 +16,17 @@ export const createMember = (
     }
 
     // REPLACE BLANK NAMES WITH '-'
-    if (!tempNewMember.firstName) {
+    if (!tempNewMember.firstName.trim()) {
       tempNewMember.firstName = "-"
     } 
-    if (!tempNewMember.lastName) {
+    if (!tempNewMember.lastName.trim()) {
       tempNewMember.lastName = "-"
     }
 
     // CHECK AGAINST NAMING DUPLICATIONS
     for (const tempMember of tempMembers) {
-      if (tempNewMember.firstName ===  tempMember.firstName &
-        tempNewMember.lastName === tempMember.lastName
+      if (tempNewMember.firstName.trim() ===  tempMember.firstName.trim() &
+        tempNewMember.lastName.trim() === tempMember.lastName.trim()
       ) {
         tempNewMember.lastName += " (Copy)"
       }
