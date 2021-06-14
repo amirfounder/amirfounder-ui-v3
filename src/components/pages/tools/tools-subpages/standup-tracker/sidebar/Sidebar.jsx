@@ -25,13 +25,11 @@ const Sidebar = () => {
     <div>
       <SidebarWrapper>
         <HeadingWrapper level="2">
-          Manage Team
+          Manage Your Team
         </HeadingWrapper>
         <SidebarTeamList />
-        <div>
-          <button onClick={handleAddMemberClick}>Add Member</button>
-          <button onClick={handleDeleteAllMembersClick}>Delete All Members</button>
-        </div>
+        <button onClick={handleAddMemberClick}>Add Member</button><br />
+        <button onClick={handleDeleteAllMembersClick}>Delete All</button>
         <NewMemberModal show={newMemberShow} setShow={setNewMemberModalShow}/>
       </SidebarWrapper>
     </div>
