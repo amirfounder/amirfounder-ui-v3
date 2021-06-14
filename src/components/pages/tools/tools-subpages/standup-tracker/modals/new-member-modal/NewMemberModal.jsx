@@ -20,6 +20,12 @@ const NewMemberModal = ({ show, setShow }) => {
     setShow(false)
   }
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmit()
+    }
+  }
+
   const handleSubmit = () => {
     createMember(
       members,
@@ -49,12 +55,14 @@ const NewMemberModal = ({ show, setShow }) => {
               placeholder="First Name"
               value={newMember.firstName}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
             <TextInput
               id="lastName"
               placeholder="Last Name"
               value={newMember.lastName}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
           </div>
         </div>

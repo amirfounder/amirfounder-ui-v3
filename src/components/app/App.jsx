@@ -13,7 +13,6 @@ import Tools from '../pages/tools/tools-page/Tools';
 import Projects from '../pages/projects/projects-page/Projects';
 import Blog from '../pages/blog/Blog';
 import Resume from '../pages/about/about-subpages/resume/Resume';
-import Vision from '../pages/about/about-subpages/vision/Vision';
 import Interests from '../pages/about/about-subpages/interests/Interests';
 import Contact from '../pages/contact/Contact';
 import StandupTracker from '../pages/tools/tools-subpages/standup-tracker/StandupTracker';
@@ -46,7 +45,6 @@ function App() {
         <Route exact path={Constants.PATHS.HOME} component={Home} />
         {/* ABOUT */}
         <Route exact path={Constants.PATHS.ABOUT} component={About} /> 
-        <Route exact path={Constants.PATHS.ABOUT_VISION} component={Vision} /> 
         <Route exact path={Constants.PATHS.ABOUT_RESUME} component={Resume} /> 
         <Route exact path={Constants.PATHS.ABOUT_INTERESTS} component={Interests} /> 
         {/* BLOG */}

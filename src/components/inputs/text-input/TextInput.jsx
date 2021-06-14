@@ -6,13 +6,15 @@ const TextInput = ({
   placeholder,
   value,
   id,
-  readOnly
+  readOnly,
+  onKeyDown
 }) => {
   return(
     <label
       htmlFor={id}
     >
       <input
+        onKeyDown={onKeyDown}
         readOnly={readOnly}
         id={id}
         onChange={onChange}
