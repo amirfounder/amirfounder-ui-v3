@@ -5,7 +5,7 @@ import PageWrapper from '../../../../wrappers/page/PageWrapper';
 const Resume = () => {
   return(
     <PageWrapper>
-      <Heading>
+      <Heading level="1">
         Resume
       </Heading>
     </PageWrapper>
