@@ -13,9 +13,8 @@ export const resetMembersData = (members) => {
 }
 
 export const setMembersData = (setMembers) => {
-  // GET THE COOKIE
-  const cookie = getMembersCookie()
   let members;
+  const cookie = getMembersCookie()
   if (cookie) {
     members = getMembersCookie().members
     members = (Number(cookie.date) < Number(generateTodaysCookieDate())) && resetMembersData(members)

@@ -1,8 +1,7 @@
-
-// COOKIE SERVICE
-
 import { Constants } from "./Constants"
 import { generateTodaysCookieDate } from "./Generator"
+
+// COOKIE SERVICE
 
 export const getAllCookies = () => {
   return document.cookie
@@ -26,8 +25,13 @@ export const setCookie = (name, value, expires=new Date(9999, 0, 1).toUTCString(
 
 // SCRUM STANDUP TRACKER
 
-export const getMembersCookie = () => JSON.parse(getCookie(Constants.COOKIE_NAMES.MEMBERS)) 
+export const getMembersCookie = () => {
+  return JSON.parse(getCookie(Constants.COOKIE_NAMES.MEMBERS)) 
+}
 
-export const setMembersCookie = (members, date=generateTodaysCookieDate()) => {
+export const setMembersCookie = (
+  members,
+  date=generateTodaysCookieDate()
+) => {
   setCookie(Constants.COOKIE_NAMES.MEMBERS, JSON.stringify({date, members}))
 }
