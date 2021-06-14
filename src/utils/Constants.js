@@ -29,7 +29,8 @@ export const Constants = Object.freeze({
     ABOUT_VISION: '/about/vision',
     ABOUT_RESUME: '/about/resume',
     ABOUT_INTERESTS: '/about/interests',
-    TOOLS_STANDUP_TRACKER: '/tools/standup-tracker'
+    TOOLS_STANDUP_TRACKER: '/tools/standup-tracker',
+    RESEARCH_COMPUTER_VISION: '/research/computer-vision',
   },
   OBJECTS: {
     EMPTY_MEMBER_OBJECT: {

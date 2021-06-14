@@ -23,6 +23,7 @@ import ResearchSubheader from '../headers/subheaders/research-subheader/Research
 import AboutSubheader from '../headers/subheaders/about-subheader/AboutSubheader';
 import ProjectsSubheader from '../headers/subheaders/projects-subheader/ProjectsSubheader';
 import BlogSubheader from '../headers/subheaders/blog-subheader/BlogSubheader';
+import ComputerVision from '../pages/research/research-subpages/computer-vision/ComputerVision';
 
 
 function App() {
@@ -38,26 +39,19 @@ function App() {
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.PROJECTS) && <ProjectsSubheader />}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.TOOLS) && <ToolsSubheader />}
       {pathNameDoesMatch(location, Constants.REGEX.PATHNAMES.RESEARCH) && <ResearchSubheader />}
-
       {/* PATHS */}
       <Switch>
-        {/* HOME */}
         <Route exact path={Constants.PATHS.HOME} component={Home} />
-        {/* ABOUT */}
         <Route exact path={Constants.PATHS.ABOUT} component={About} /> 
+        <Route exact path={Constants.PATHS.BLOG} component={Blog} /> 
+        <Route exact path={Constants.PATHS.PROJECTS} component={Projects} />
+        <Route exact path={Constants.PATHS.RESEARCH} component={Research} />
+        <Route exact path={Constants.PATHS.TOOLS} component={Tools} /> 
+        <Route exact path={Constants.PATHS.CONTACT} component={Contact} />
         <Route exact path={Constants.PATHS.ABOUT_RESUME} component={Resume} /> 
         <Route exact path={Constants.PATHS.ABOUT_INTERESTS} component={Interests} /> 
-        {/* BLOG */}
-        <Route exact path={Constants.PATHS.BLOG} component={Blog} /> 
-        {/* PROJECTS */}
-        <Route exact path={Constants.PATHS.PROJECTS} component={Projects} />
-        {/* RESEARCH */}
-        <Route exact path={Constants.PATHS.RESEARCH} component={Research} /> 
-        {/* TOOLS */}
-        <Route exact path={Constants.PATHS.TOOLS} component={Tools} /> 
         <Route exact path={Constants.PATHS.TOOLS_STANDUP_TRACKER} component={StandupTracker} /> 
-        {/* CONTACT */}
-        <Route exact path={Constants.PATHS.CONTACT} component={Contact} />
+        <Route exact path={Constants.PATHS.RESEACH_COMPUTER_VISION} component={ComputerVision} />
       </Switch>
     </div>
   );

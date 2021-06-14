@@ -4,7 +4,7 @@ import { generateTodaysCookieDate } from "../../../../../utils/Generator"
 export const resetMembersData = (members) => {
   const tempMembers = [...members]
   for (const member of tempMembers) {
-    member.attendance = '';
+    member.attendance = 'Present';
     member.last24Hours = '';
     member.next24Hours = '';
     member.blockers = '';

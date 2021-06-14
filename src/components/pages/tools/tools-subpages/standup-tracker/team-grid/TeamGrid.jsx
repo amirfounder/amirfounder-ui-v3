@@ -20,8 +20,8 @@ const TeamGrid = () => {
         <div>Blockers</div>
       </div>
       <div className={styles.content}>
-        {members && members.map((member, index) => (
-          <TeamGridMemberItem member={member} key={`${member}-${index}`}/>
+        {members && members.map((member) => (
+          <TeamGridMemberItem member={member} key={`${member.id}`}/>
         ))}
       </div>
     </div>

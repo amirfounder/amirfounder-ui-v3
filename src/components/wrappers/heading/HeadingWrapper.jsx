@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './HeadingWrapper.module.scss'
 
-const Heading = ({ level,  children }) => {
+const HeadingWrapper = ({ level,  children }) => {
   return(
     // CHECK FOR UNDEFINED
     !level ? <h2 className={styles.headingTwo} >{children}</h2> :
@@ -19,4 +19,4 @@ const Heading = ({ level,  children }) => {
   )
 }
 
-export default Heading;
+export default HeadingWrapper;

@@ -21,12 +21,10 @@ const TeamGridMemberItem = ({ member }) => {
     <div className={styles.main}>
       <TextInput
         readOnly
-        id="firstName"
         value={member.firstName}
       />
       <TextInput
         readOnly
-        id="lastName"
         value={member.lastName}
       />
       <SelectInput

@@ -9,9 +9,9 @@ const ResearchSubheader = () => {
       <div className={styles.columnOne}>
         <Link className={styles.navLink} to={Constants.PATHS.RESEARCH} >Research</Link>
       </div>
-      <diiv className={styles.columnTwo}>
-        <Link className={styles.navLink} to="/">Computer Vision (Coming Soon)</Link>
-      </diiv>
+      <div className={styles.columnTwo}>
+        <Link className={styles.navLink} to={Constants.PATHS.RESEARCH_COMPUTER_VISION}>Computer Vision</Link>
+      </div>
     </div>
   )
 }
