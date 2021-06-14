@@ -20,13 +20,19 @@
 .deleteIcon,
 .editIcon {
   font-size: 18px;
+  color: #bbb;
 }
 
 .deleteIcon:hover,
-.editIcon:hover {
+.editIcon:hover
+{
   cursor: pointer;
+  color: black;
+  transition-duration: .33s;
 }
-
-.deleteIcon:hover {
-  color: red;
+.deleteIcon:not(:hover)
+.editIcon:not(:hover)
+{
+  color: #bbb;
+  transition-duration: .33s;
 }

@@ -18,7 +18,7 @@ const SidebarTeamListItem = ({ member }) => {
   const handleMemberEdit = () => {
     console.log('clicked the edit')
   }
-  
+
   return(
     <div className={styles.main}>
       <div className={styles.memberInfo}>
@@ -28,9 +28,9 @@ const SidebarTeamListItem = ({ member }) => {
         <span className={styles.deleteIcon} onClick={handleMemberDelete}>
           <VscTrash />
         </span>
-        <span className={styles.editIcon} onClick={handleMemberEdit}>
+        {/* <span className={styles.editIcon} onClick={handleMemberEdit}>
           <BsPencil />
-        </span>
+        </span> */}
       </div>
     </div>
   )

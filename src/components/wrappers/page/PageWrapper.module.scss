@@ -1,6 +1,14 @@
 .main {
-  padding: 10vh 2vw;
+  padding: 12vh 2vw;
   display: grid;
+}
+
+.headerHeight {
+  min-height: calc(92vh - 24vh - 2px);
+}
+
+.subheaderHeight {
+  min-height: calc(86vh - 24vh - 2px);
 }
 
 .contained {

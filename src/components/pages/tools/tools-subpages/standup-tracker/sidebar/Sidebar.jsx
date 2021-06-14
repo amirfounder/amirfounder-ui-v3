@@ -5,6 +5,7 @@ import HeadingWrapper from '../../../../../wrappers/heading/HeadingWrapper';
 import { setMembersInCookie } from '../../../../../../utils/CookieService';
 import NewMemberModal from '../modals/new-member-modal/NewMemberModal';
 import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
+import styles from './Sidebar.module.scss'
 
 const Sidebar = () => {
 
@@ -28,8 +29,10 @@ const Sidebar = () => {
           Manage Your Team
         </HeadingWrapper>
         <SidebarTeamList />
-        <button onClick={handleAddMemberClick}>Add Member</button><br />
-        <button onClick={handleDeleteAllMembersClick}>Delete All</button>
+        <div className={styles.buttons}>
+          <button onClick={handleAddMemberClick}>Add Member</button>
+          <button onClick={handleDeleteAllMembersClick}>Delete All</button>
+        </div>
         <NewMemberModal show={newMemberShow} setShow={setNewMemberModalShow}/>
       </SidebarWrapper>
     </div>
