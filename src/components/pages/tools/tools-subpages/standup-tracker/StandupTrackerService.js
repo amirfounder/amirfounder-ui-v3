@@ -16,8 +16,8 @@ export const setMembersData = (setMembers) => {
   let members;
   const cookie = getMembersCookie()
   if (cookie != null) {
-    members = getMembersCookie().members
-    members = (Number(cookie.date) < Number(generateTodaysCookieDate())) && resetMembersData(members)
+    members = cookie.members
+    members = (Number(cookie.date) < Number(generateTodaysCookieDate())) ? resetMembersData(members) : members
   } else {
     members = []
   }
