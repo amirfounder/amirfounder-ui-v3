@@ -10,7 +10,7 @@ const ToolsSubheader = () => {
         <Link className={styles.navLink} to={Constants.PATHS.TOOLS}>Tools</Link>
       </div>
       <div className={styles.columnTwo}>
-        <Link className={styles.navLink} to={Constants.PATHS.STANDUP_TRACKER}>Standup Tracker</Link>
+        <Link className={styles.navLink} to={Constants.PATHS.TOOLS_STANDUP_TRACKER}>Standup Tracker</Link>
       </div>
     </div>
   )

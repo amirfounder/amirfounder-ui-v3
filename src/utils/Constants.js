@@ -26,10 +26,10 @@ export const Constants = Object.freeze({
     RESEARCH: '/research',
     TOOLS: '/tools',
     CONTACT: '/contact',
-    VISION: '/about/vision',
-    RESUME: '/about/resume',
-    INTERESTS: '/about/interests',
-    STANDUP_TRACKER: '/tools/standup-tracker'
+    ABOUT_VISION: '/about/vision',
+    ABOUT_RESUME: '/about/resume',
+    ABOUT_INTERESTS: '/about/interests',
+    TOOLS_STANDUP_TRACKER: '/tools/standup-tracker'
   },
   OBJECTS: {
     EMPTY_MEMBER_OBJECT: {

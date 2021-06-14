@@ -46,9 +46,9 @@ function App() {
         <Route exact path={Constants.PATHS.HOME} component={Home} />
         {/* ABOUT */}
         <Route exact path={Constants.PATHS.ABOUT} component={About} /> 
-        <Route exact path={Constants.PATHS.VISION} component={Vision} /> 
-        <Route exact path={Constants.PATHS.RESUME} component={Resume} /> 
-        <Route exact path={Constants.PATHS.INTERESTS} component={Interests} /> 
+        <Route exact path={Constants.PATHS.ABOUT_VISION} component={Vision} /> 
+        <Route exact path={Constants.PATHS.ABOUT_RESUME} component={Resume} /> 
+        <Route exact path={Constants.PATHS.ABOUT_INTERESTS} component={Interests} /> 
         {/* BLOG */}
         <Route exact path={Constants.PATHS.BLOG} component={Blog} /> 
         {/* PROJECTS */}
@@ -57,7 +57,7 @@ function App() {
         <Route exact path={Constants.PATHS.RESEARCH} component={Research} /> 
         {/* TOOLS */}
         <Route exact path={Constants.PATHS.TOOLS} component={Tools} /> 
-        <Route exact path={Constants.PATHS.STANDUP_TRACKER} component={StandupTracker} /> 
+        <Route exact path={Constants.PATHS.TOOLS_STANDUP_TRACKER} component={StandupTracker} /> 
         {/* CONTACT */}
         <Route exact path={Constants.PATHS.CONTACT} component={Contact} />
       </Switch>

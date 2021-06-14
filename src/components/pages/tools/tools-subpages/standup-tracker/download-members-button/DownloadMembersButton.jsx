@@ -13,7 +13,7 @@ const DownloadMembersButton = () => {
   return(
     <>
       <CSVLink
-        filename={`standup_data_${generateTodaysDate()}`}
+        filename={`standup_data_${generateTodaysDate()}.csv`}
         data={convertMembersToCSVData(members)}
       >
         <button>
