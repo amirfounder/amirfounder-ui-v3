@@ -2,6 +2,7 @@ import React from 'react'
 import { CSVLink } from 'react-csv'
 import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext'
 import { convertMembersToCSVData } from '../../../../../../utils/CSVHelper'
+import { generateTodaysDate } from '../../../../../../utils/Generator'
 
 const DownloadMembersButton = () => {
 
@@ -11,7 +12,10 @@ const DownloadMembersButton = () => {
 
   return(
     <>
-      <CSVLink filename="standup_data.csv" data={convertMembersToCSVData(members)}>
+      <CSVLink
+        filename={`standup_data_${generateTodaysDate()}`}
+        data={convertMembersToCSVData(members)}
+      >
         <button>
           Download Standup Data
         </button>
