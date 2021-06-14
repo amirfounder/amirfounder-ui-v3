@@ -4,9 +4,9 @@ import HeadingWrapper from '../../../../wrappers/heading/HeadingWrapper';
 import PageWrapper from '../../../../wrappers/page/PageWrapper';
 import TeamGrid from './team-grid/TeamGrid';
 import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
-import { getMembersFromCookie } from '../../../../../utils/CookieService';
 import Sidebar from './sidebar/Sidebar';
 import DownloadMembersButton from './download-members-button/DownloadMembersButton';
+import { setMembersData } from './StandupTrackerService';
 
 const StandupTracker = () => {
   
@@ -15,7 +15,7 @@ const StandupTracker = () => {
   } = useStandupTrackerContext()
 
   useEffect(() => {
-    setMembers(getMembersFromCookie())
+    setMembersData(setMembers)
   }, [setMembers])
 
   return(

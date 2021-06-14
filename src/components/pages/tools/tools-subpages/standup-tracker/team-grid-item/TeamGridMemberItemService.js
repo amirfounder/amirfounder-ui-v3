@@ -1,4 +1,4 @@
-import { setMembersInCookie } from "../../../../../../utils/CookieService"
+import { setMembersCookie } from "../../../../../../utils/CookieService"
 
 export const updateMembers = (members, setMembers, member, key, value) => {
   const tempMembers = [...members]
@@ -8,6 +8,6 @@ export const updateMembers = (members, setMembers, member, key, value) => {
       break
     }
   }
-  setMembersInCookie(tempMembers)
+  setMembersCookie(tempMembers)
   setMembers(tempMembers)
 }

@@ -1,5 +1,5 @@
 import { Constants } from "../../../../../../../utils/Constants"
-import { setMembersInCookie } from "../../../../../../../utils/CookieService"
+import { setMembersCookie } from "../../../../../../../utils/CookieService"
 import { generateUniqueId } from "../../../../../../../utils/Generator"
 
 export const createMember = (
@@ -45,7 +45,7 @@ export const createMember = (
     // UPDATE MEMBERS
     tempMembers.push(tempNewMember)
     setMembers(tempMembers)
-    setMembersInCookie(tempMembers)
+    setMembersCookie(tempMembers)
 
     // RESET MODAL
     setNewMember(Constants.OBJECTS.EMPTY_MEMBER_OBJECT)

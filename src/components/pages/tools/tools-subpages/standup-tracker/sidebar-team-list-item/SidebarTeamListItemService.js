@@ -1,4 +1,4 @@
-import { setMembersInCookie } from "../../../../../../utils/CookieService"
+import { setMembersCookie } from "../../../../../../utils/CookieService"
 
 export const deleteMember = (members, member) => {
   const newMembers = []
@@ -7,6 +7,6 @@ export const deleteMember = (members, member) => {
       newMembers.push({...loopedMember})
     }
   }
-  setMembersInCookie(newMembers)
+  setMembersCookie(newMembers)
   return newMembers
 }

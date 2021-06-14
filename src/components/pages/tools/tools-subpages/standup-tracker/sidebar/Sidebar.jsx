@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SidebarWrapper from '../../../../../wrappers/sidebar/SidebarWrapper';
 import SidebarTeamList from '../sidebar-team-list/SidebarTeamList';
 import HeadingWrapper from '../../../../../wrappers/heading/HeadingWrapper';
-import { setMembersInCookie } from '../../../../../../utils/CookieService';
+import { setMembersCookie } from '../../../../../../utils/CookieService';
 import NewMemberModal from '../modals/new-member-modal/NewMemberModal';
 import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
 import styles from './Sidebar.module.scss'
@@ -18,7 +18,7 @@ const Sidebar = () => {
   const handleAddMemberClick = () => setNewMemberModalShow(true)
 
   const handleDeleteAllMembersClick = () => {
-    setMembersInCookie([])
+    setMembersCookie([])
     setMembers([])
   }
 

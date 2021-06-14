@@ -22,9 +22,8 @@ const TextAreaInput = ({
         rows={rows}
         onFocus={onFocus}
         onBlur={onBlur}
-      >
-        {value}
-      </textarea>
+        value={value}
+      />
     </label>
   )
 }
