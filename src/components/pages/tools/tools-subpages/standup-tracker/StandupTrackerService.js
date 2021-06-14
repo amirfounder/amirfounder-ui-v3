@@ -13,12 +13,14 @@ export const resetMembersData = (members) => {
 }
 
 export const setMembersData = (setMembers) => {
+  // GET THE COOKIE
   const cookie = getMembersCookie()
-  const todaysCookieDate = generateTodaysCookieDate()
-
-  let members = getMembersCookie().members ? getMembersCookie().members : []
-  if (Number(cookie.date) < Number(todaysCookieDate)) {
-    members = resetMembersData(members);
+  let members;
+  if (cookie) {
+    members = getMembersCookie().members
+    members = (Number(cookie.date) < Number(generateTodaysCookieDate())) && resetMembersData(members)
+  } else {
+    members = []
   }
   setMembers(members)
 }
