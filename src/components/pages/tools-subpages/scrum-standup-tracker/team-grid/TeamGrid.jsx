@@ -1,7 +1,7 @@
 import React from 'react';
-import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
+import { useStandupTrackerContext } from '../../../../context/StandupTrackerContext';
 import styles from './TeamGrid.module.scss'
-import TeamGridMemberItem from '../team-grid-item/TeamGridMemberItem';
+import TeamGridMemberRecord from '../team-grid-record/TeamGridMemberRecord';
 
 const TeamGrid = () => {
 
@@ -20,8 +20,8 @@ const TeamGrid = () => {
         <div>Blockers</div>
       </div>
       <div className={styles.content}>
-        {members && members.map((member) => (
-          <TeamGridMemberItem member={member} key={`${member.id}`}/>
+        {members && members.map((member, index) => (
+          <TeamGridMemberRecord member={member} key={`${member}-${index}`}/>
         ))}
       </div>
     </div>

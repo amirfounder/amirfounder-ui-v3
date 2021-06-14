@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
+import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
 import SidebarTeamListItem from '../sidebar-team-list-item/SidebarTeamListItem';
 import styles from './SidebarTeamList.module.scss'
 

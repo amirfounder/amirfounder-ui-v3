@@ -5,7 +5,7 @@ import SelectInput from '../../../../../inputs/select-input/SelectInput';
 import { Constants } from '../../../../../../utils/Constants';
 import TextAreaInput from '../../../../../inputs/textarea-input/TextAreaInput';
 import { updateMembers } from './TeamGridMemberItemService';
-import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
+import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
 
 const TeamGridMemberItem = ({ member }) => {
 

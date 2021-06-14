@@ -4,7 +4,7 @@ import './index.scss';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { StandupTrackerProvider } from './context/StandupTrackerContext'
+import { StandupTrackerProvider } from './components/context/StandupTrackerContext'
 
 ReactDOM.render(
   <React.StrictMode>

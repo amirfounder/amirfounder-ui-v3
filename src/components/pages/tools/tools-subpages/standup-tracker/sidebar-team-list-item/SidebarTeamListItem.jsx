@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
+import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
 import styles from './SidebarTeamListItem.module.scss'
 import { deleteMember } from './SidebarTeamListItemService';
 import { VscTrash } from 'react-icons/vsc'

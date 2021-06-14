@@ -4,7 +4,7 @@ import SidebarTeamList from '../sidebar-team-list/SidebarTeamList';
 import HeadingWrapper from '../../../../../wrappers/heading/HeadingWrapper';
 import { setMembersCookie } from '../../../../../../utils/CookieService';
 import NewMemberModal from '../modals/new-member-modal/NewMemberModal';
-import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext';
+import { useStandupTrackerContext } from '../../../../../context/StandupTrackerContext';
 import styles from './Sidebar.module.scss'
 
 const Sidebar = () => {

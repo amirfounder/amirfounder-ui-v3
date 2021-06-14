@@ -3,7 +3,7 @@ import styles from './NewMemberModal.module.scss'
 import ModalWrapper from '../../../../../../wrappers/modal/ModalWrapper'
 import TextInput from '../../../../../../inputs/text-input/TextInput'
 import HeadingWrapper from '../../../../../../wrappers/heading/HeadingWrapper'
-import { useStandupTrackerContext } from '../../../../../../../context/StandupTrackerContext'
+import { useStandupTrackerContext } from '../../../../../../context/StandupTrackerContext'
 import { createMember } from './NewMemberModalService'
 import { Constants } from '../../../../../../../utils/Constants'
 
