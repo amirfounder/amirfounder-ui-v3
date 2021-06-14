@@ -7,16 +7,16 @@ import styles from './App.module.scss';
 import pathNameDoesMatch from '../../utils/PathNameMatchers'
 // PAGES
 import Home from '../pages/home/Home';
-import About from '../pages/about-page/About';
-import Research from '../pages/research-page/Research';
-import Tools from '../pages/tools-page/Tools';
-import Projects from '../pages/projects-page/Projects';
+import About from '../pages/about/about-page/About';
+import Research from '../pages/research/research-page/Research';
+import Tools from '../pages/tools/tools-page/Tools';
+import Projects from '../pages/projects/projects-page/Projects';
 import Blog from '../pages/blog/Blog';
-import Resume from '../pages/about-subpages/resume/Resume';
-import Vision from '../pages/about-subpages/vision/Vision';
-import Interests from '../pages/about-subpages/interests/Interests';
+import Resume from '../pages/about/about-subpages/resume/Resume';
+import Vision from '../pages/about/about-subpages/vision/Vision';
+import Interests from '../pages/about/about-subpages/interests/Interests';
 import Contact from '../pages/contact/Contact';
-import StandupTracker from '../pages/tools-subpages/standup-tracker/StandupTracker';
+import StandupTracker from '../pages/tools/tools-subpages/standup-tracker/StandupTracker';
 // HEADERS
 import Header from '../headers/header/Header';
 import ToolsSubheader from '../headers/subheaders/tools-subheader/ToolsSubheader';
