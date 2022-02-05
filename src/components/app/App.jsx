@@ -26,7 +26,7 @@ import BlogSubheader from '../headers/subheaders/blog-subheader/BlogSubheader';
 import ComputerVision from '../pages/research/research-subpages/computer-vision/ComputerVision';
 
 
-function App() {
+const App = () => {
 
   const location = useLocation()
 
